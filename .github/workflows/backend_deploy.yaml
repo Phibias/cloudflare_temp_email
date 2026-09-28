@@ -64,7 +64,7 @@ jobs:
             echo "Applied mail-parser-wasm-worker patch"
           fi
           
-            pnpm run build
+            
             pnpm run deploy
           
           echo "Deployed for tag ${{ github.ref_name }}"
