@@ -63,9 +63,10 @@ jobs:
             git apply ../.github/config/mail-parser-wasm-worker.patch
             echo "Applied mail-parser-wasm-worker patch"
           fi
-
+          
+            pnpm run build
             pnpm run deploy
-         
+          
           echo "Deployed for tag ${{ github.ref_name }}"
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
